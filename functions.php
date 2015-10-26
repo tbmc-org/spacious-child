@@ -62,3 +62,4 @@ function social_media_icons( $atts ) {
 }
 
 add_shortcode( 'social-icons', 'social_media_icons' );
+add_filter( 'widget_text', 'do_shortcode' );
