@@ -29,3 +29,36 @@ function spacious_footer_copyright() {
 endif;
 
 add_action( 'spacious_footer_copyright', 'spacious_footer_copyright', 10 );
+
+/**
+ * Shortcode to output social media icons
+ */
+function social_media_icons( $atts ) {
+		if ( !empty( $atts['facebook'] ) || !empty( $atts['google-plus'] ) ) {
+		
+			$sites = array(
+				'facebook' => array(
+					'nice_name' => 'Facebook',
+					'style' => 'fa-facebook'
+				),
+				'google-plus' => array(
+					'nice_name' => 'Google+',
+					'style' => 'fa-google-plus'
+				)
+			);
+
+			$html = "<ul class='share-buttons'>";
+
+			foreach( $atts as $key => $val ) {
+				$html .= "<li><a href='" . $val . "' target='_blank' title='Follow us on " . $sites[ strtolower( $key ) ]['nice_name'] . "'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x'></i><i class='fa " . $sites[ strtolower( $key ) ]['style'] . " fa-stack-1x fa-inverse'></i></span></a></li>";
+			}
+
+			$html .= "</ul>";
+
+			return $html;
+		}
+
+		return '';
+}
+
+add_shortcode( 'social-icons', 'social_media_icons' );
