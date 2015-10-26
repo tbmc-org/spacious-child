@@ -11,3 +11,7 @@
  Tags:         light, white, dark, two-columns, right-sidebar, left-sidebar, fluid-layout, responsive-layout, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options
  Text Domain:  spacious-child
 */
+
+.entry-content p {
+	line-height: 32px;
+}
