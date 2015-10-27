@@ -4,7 +4,6 @@ Make sure to install the [Spacious theme](http://themegrill.com/themes/spacious/
 
 - Paragraph line height
 - Footer text
-
-### Upcoming changes 
-
-- Addition of social media icons
+- Shortcode for social media icons
+- Change size of Google maps on sidebar
+- Adds Google Analytics code
