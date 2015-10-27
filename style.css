@@ -15,3 +15,21 @@
 .entry-content p {
 	line-height: 32px;
 }
+
+.social-icons {
+	list-style: none;
+	padding: 0;
+}
+
+.social-icons li {
+	display: inline;
+	border-bottom: transparent !important;
+}
+
+.footer-widgets-area .social-icons a {
+	color: inherit !important;
+}
+
+aside.widget_contact_info .contact-map {
+	max-width: 330px;
+}

@@ -47,7 +47,7 @@ function social_media_icons( $atts ) {
 				)
 			);
 
-			$html = "<ul class='share-buttons'>";
+			$html = "<ul class='social-icons'>";
 
 			foreach( $atts as $key => $val ) {
 				$html .= "<li><a href='" . $val . "' target='_blank' title='Follow us on " . $sites[ strtolower( $key ) ]['nice_name'] . "'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x'></i><i class='fa " . $sites[ strtolower( $key ) ]['style'] . " fa-stack-1x fa-inverse'></i></span></a></li>";
