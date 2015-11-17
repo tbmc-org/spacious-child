@@ -44,6 +44,10 @@ function social_media_icons( $atts ) {
 				'google-plus' => array(
 					'nice_name' => 'Google+',
 					'style' => 'fa-google-plus'
+				),
+				'github' => array(
+					'nice_name' => 'Github',
+					'style' => 'fa-code-fork'
 				)
 			);
 
