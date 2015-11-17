@@ -67,3 +67,22 @@ function social_media_icons( $atts ) {
 
 add_shortcode( 'social-icons', 'social_media_icons' );
 add_filter( 'widget_text', 'do_shortcode' );
+
+/**
+ * Login page customizations
+ */
+function tbmc_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'tbmc_login_logo_url' );
+
+function tbmc_login_logo_url_title() {
+	return 'DFW Buddhist Vihara';
+}
+add_filter( 'login_headertitle', 'tbmc_login_logo_url_title' );
+
+function tbmc_login_stylesheet() {
+	wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/assets/css/style-login.css' );
+}
+add_action( 'login_enqueue_scripts', 'tbmc_login_stylesheet' );
+
